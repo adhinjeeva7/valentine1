@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            color: red;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        #yes {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #no {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: white;
+            color: red;
+            border: 2px solid red;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        /* Photo Container */
+        .photo-container {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .photo-container img {
+            width: 120px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ff1493;
+            transition: transform 0.3s ease-in-out;
+        }
+        .photo-container img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will you be my Valentine? 💖</h1>
+
+    <!-- Photo Section (You can replace the images with your own) -->
+    <div class="photo-container">
+        <img src="cats.jpg" alt="Your Special Moment">
+            </div>
+
+    <div class="buttons">
+        <button id="yes" onclick="location.href='yes.html'">Yes</button>
+        <button id="no" onclick="growYes()">No</button>
+    </div>
+
+    <script>
+        let yesSize = 20;
+        function growYes() {
+            yesSize += 10;
+            document.getElementById('yes').style.fontSize = yesSize + "px";
+        }
+    </script>
+
+</body>
+</html>
